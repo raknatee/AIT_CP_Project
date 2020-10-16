@@ -1,0 +1,27 @@
+version: '3'
+
+# https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html
+services:
+  app:
+    # build: .
+
+
+    # image: jupyter/datascience-notebook
+
+    # build:
+    #   context: ./
+    #   dockerfile: Dockerfile_ubuntu
+
+    build:
+      context: ./
+
+
+
+    ports:
+      - "8888:8888"
+    volumes: 
+      # - "./src:/home/src"
+      - "./src:/home/jovyan/work"
+    # environment: 
+    #   - JUPYTER_ENABLE_LAB=yes
+  
