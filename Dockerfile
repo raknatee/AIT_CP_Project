@@ -5,10 +5,15 @@ RUN pip install jupyter-contrib-nbextensions==0.5.1
 RUN jupyter contrib nbextension install
 
 # COPY ./req.txt .
+RUN pip install 'pillow==7.2.0'
+RUN pip install 'torchvision==0.2.2'
+RUN pip install 'torch==1.6.0'
 
-# when export data > conda list --export > req.txt
-# RUN pip install -r req.txt
-
+RUN pip install "opencv-python==4.4.0.44"
+RUN pip install "sklearn"
+RUN pip install "pandas"
+RUN pip install "seaborn"
+RUN pip install "matplotlib"
 
 
 

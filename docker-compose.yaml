@@ -14,6 +14,7 @@ services:
 
     build:
       context: ./
+      dockerfile: Dockerfile
 
 
 
@@ -22,6 +23,6 @@ services:
     volumes: 
       # - "./src:/home/src"
       - "./src:/home/jovyan/work"
-    # environment: 
-    #   - JUPYTER_ENABLE_LAB=yes
+    environment: 
+      - GRANT_SUDO=yes
   
