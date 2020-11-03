@@ -22,7 +22,7 @@ services:
       - "8888:8888"
     volumes: 
       # - "./src:/home/src"
-      - "./src:/home/jovyan/work"
+      - "./:/home/jovyan/work"
     environment: 
       - GRANT_SUDO=yes
   
