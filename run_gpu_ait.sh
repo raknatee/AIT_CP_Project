@@ -4,4 +4,4 @@
 docker build -f Dockerfile.gpu -t my_pytorch . && \
  docker run -it --gpus all -p 8888:8888 -e \
  CHOWN_HOME=yes -e NB_UID=$(id -u) -e CHOWN_EXTRA_OPTS='-R' --user $(id -u) --group-add $(id -g) \
-  -v "/home/corse/st121723/Desktop/AIT_CP_Project:/tf/notebooks"  my_pytorch
+  -v "$(pwd):/tf/notebooks"  my_pytorch
