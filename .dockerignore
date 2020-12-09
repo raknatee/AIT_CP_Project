@@ -1,1 +1,5 @@
 this_folder_git_ignore/
+code/
+paper/
+.git/
+dubug.log
