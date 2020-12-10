@@ -25,5 +25,5 @@ RUN pip install "matplotlib"
 RUN pip install "playsound"
 
 
-
-# CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root
+COPY ./jupyter_config /root/.jupyter
+CMD jupyter notebook --ip='*' --port=8888 --no-browser  --allow-root
